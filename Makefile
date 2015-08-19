@@ -16,7 +16,7 @@ OBJECTS := \
 all: mkbin bin/pixelsort
 
 bin/pixelsort: $(OBJECTS)
-	$(LD) -o $(@) $(CXXFLAGS) $(LDFLAGS) $(^)
+	$(LD) -o $(@) $(CXXFLAGS) $(^) $(LDFLAGS)
 
 mkbin:
 	mkdir -p $(BIN)
